@@ -1,0 +1,27 @@
+# Sitio estático: no hay comando de compilación; se publica la raíz del repositorio.
+[build]
+  publish = "."
+
+# Cabeceras de seguridad. La CSP solo permite recursos del propio dominio:
+# si alguien añade un script, una fuente o un iframe de terceros, el navegador lo bloquea.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()"
+    Strict-Transport-Security = "max-age=31536000"
+
+# Las fuentes no cambian: caché de un año
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Imágenes: caché de una semana (si se cambia una foto, mejor con nombre nuevo)
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
