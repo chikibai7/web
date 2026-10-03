@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Delega Pisos · Gestión de pisos turísticos en Madrid norte</title>
+  <meta name="description" content="Gestión integral de viviendas turísticas en Alcobendas, San Sebastián de los Reyes, Tres Cantos y Madrid norte. Primer mes al 10 %, sin permanencia y solo pisos con licencia.">
+  <meta name="theme-color" content="#FAF8F5">
+
+  <link rel="preload" href="/fonts/lora-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <link rel="icon" href="/img/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Dirección provisional: Netlify la cambia por la real al desplegar (ver netlify.toml) -->
+  <link rel="canonical" href="https://delegapisos.netlify.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Delega Pisos">
+  <meta property="og:title" content="Delega Pisos · Gestión de pisos turísticos en Madrid norte">
+  <meta property="og:description" content="Gestión integral de viviendas turísticas en Alcobendas, San Sebastián de los Reyes, Tres Cantos y Madrid norte.">
+  <meta property="og:url" content="https://delegapisos.netlify.app/">
+  <meta property="og:image" content="https://delegapisos.netlify.app/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logotipo de Delega Pisos sobre fondo azul marino">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Delega Pisos",
+    "description": "Gestión integral de viviendas turísticas en Alcobendas, San Sebastián de los Reyes, Tres Cantos y Madrid norte.",
+    "url": "https://delegapisos.netlify.app/",
+    "logo": "https://delegapisos.netlify.app/img/logo-horizontal.png",
+    "image": "https://delegapisos.netlify.app/img/og-image.png",
+    "telephone": "+34 687 357 665",
+    "email": "moriogarciaatance@gmail.com",
+    "areaServed": [
+      { "@type": "City", "name": "Alcobendas" },
+      { "@type": "City", "name": "San Sebastián de los Reyes" },
+      { "@type": "City", "name": "Tres Cantos" },
+      { "@type": "Place", "name": "Madrid norte" }
+    ]
+  }
+  </script>
+
+  <script src="/js/main.js" defer></script>
+</head>
+<body class="con-barra">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <span id="nueva-pestana" hidden>Se abre en una pestaña nueva</span>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio">
+        <img src="/img/logo-delega-pisos.webp" srcset="/img/logo-delega-pisos.webp 1x, /img/logo-delega-pisos@2x.webp 2x" width="181" height="40" alt="Delega Pisos, inicio">
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">
+          <svg class="icon icon-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5h16M4 12h16M4 16.5h16"/></svg>
+          <svg class="icon icon-cerrar" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg>
+          <span class="nav-toggle-label">Menú</span>
+        </button>
+        <div class="nav-panel" id="menu">
+          <ul class="nav-list" role="list">
+            <li><a href="#servicio">Servicio</a></li>
+            <li><a href="#como-funciona">Cómo funciona</a></li>
+            <li><a href="#condiciones">Condiciones</a></li>
+            <li><a href="#preguntas">Preguntas</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+          <a class="btn btn--primary nav-panel-cta" href="https://wa.me/34687357665?text=Hola%2C%20tengo%20un%20piso%20tur%C3%ADstico%20y%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener" aria-describedby="nueva-pestana">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.75a8.25 8.25 0 0 0-7.17 12.33L3.75 20.25l4.3-1.04A8.25 8.25 0 1 0 12 3.75z"/></svg>
+            Escribir por WhatsApp
+          </a>
+        </div>
+      </nav>
+
+      <a class="btn btn--primary btn--sm header-cta" href="https://wa.me/34687357665?text=Hola%2C%20tengo%20un%20piso%20tur%C3%ADstico%20y%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener" aria-describedby="nueva-pestana">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.75a8.25 8.25 0 0 0-7.17 12.33L3.75 20.25l4.3-1.04A8.25 8.25 0 1 0 12 3.75z"/></svg>
+        Escribir por WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- 2 · Portada -->
+    <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+      <div class="container">
+        <h1 id="hero-titulo">Delega tu piso turístico. <span class="h1-suave">Nosotros nos ocupamos del día&nbsp;a&nbsp;día.</span></h1>
+        <div class="hero-pie">
+          <p class="hero-sub">Gestión integral de viviendas turísticas en Alcobendas, San Sebastián de los Reyes, Tres Cantos y Madrid norte.</p>
+          <div class="hero-cta">
+            <div class="hero-actions">
+              <a class="btn btn--primary" href="#contacto">Solicitar una llamada</a>
+              <a class="btn btn--secondary" href="https://wa.me/34687357665?text=Hola%2C%20tengo%20un%20piso%20tur%C3%ADstico%20y%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener" aria-describedby="nueva-pestana">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.75a8.25 8.25 0 0 0-7.17 12.33L3.75 20.25l4.3-1.04A8.25 8.25 0 1 0 12 3.75z"/></svg>
+                Escribir por WhatsApp
+              </a>
+            </div>
+            <ul class="hero-nota" role="list">
+              <li>Primer mes al 10&nbsp;%</li>
+              <li>Sin permanencia</li>
+              <li>Solo pisos con licencia</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · Compromisos -->
+    <section class="compromisos" aria-labelledby="compromisos-titulo">
+      <h2 class="visually-hidden" id="compromisos-titulo">Compromisos</h2>
+      <div class="container">
+        <ul class="compromisos-lista" role="list">
+          <li data-reveal>
+            <svg class="icon icon--lg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.25"/><path class="acc" d="M12 7.5V12l3 2"/></svg>
+            <span>Respuesta a huéspedes en menos de 1&nbsp;hora</span>
+          </li>
+          <li data-reveal>
+            <svg class="icon icon--lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.75 3.75h7.5L18 7.5v12.75H6.75z"/><path d="M14.25 3.75V7.5H18"/><path class="acc" d="M9.5 12.5h5M9.5 16h5"/></svg>
+            <span>Resumen de tu piso cada mes</span>
+          </li>
+          <li data-reveal>
+            <svg class="icon icon--lg" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8.5 10.5V7.25a3.5 3.5 0 0 1 6.75-1.3"/><path class="acc" d="M12 14.5v2"/></svg>
+            <span>Sin permanencia</span>
+          </li>
+          <li data-reveal>
+            <svg class="icon icon--lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.25l7 2.75v5.5c0 4.25-2.9 7.6-7 9.25-4.1-1.65-7-5-7-9.25V6z"/><path class="acc" d="M9 12.25l2.1 2.1 4-4.1"/></svg>
+            <span>Solo pisos en regla</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 4 · Para quién es -->
+    <section class="section" id="para-quien" aria-labelledby="para-quien-titulo">
+      <div class="container split">
+        <div class="split-cabecera" data-reveal>
+          <h2 id="para-quien-titulo">Para quién es</h2>
+        </div>
+        <div class="perfiles">
+          <div class="perfil" data-reveal>
+            <h3>Tienes otro trabajo</h3>
+            <p>Cada reserva son mensajes, entradas, salidas, limpieza y reposición. Horas que no tienes.</p>
+          </div>
+          <div class="perfil" data-reveal>
+            <h3>Estás cansado de huéspedes e incidencias</h3>
+            <p>Wifi que no va a las 2 de la mañana, llaves que no aparecen, una gotera un domingo.</p>
+          </div>
+          <div class="perfil" data-reveal>
+            <h3>No quieres encargarte del día a día</h3>
+            <p>Vives lejos, viajas mucho o simplemente prefieres no estar pendiente.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · Qué hacemos -->
+    <section class="section" id="servicio" aria-labelledby="servicio-titulo">
+      <div class="container">
+        <div class="seccion-cabecera" data-reveal>
+          <h2 id="servicio-titulo">Qué hacemos</h2>
+        </div>
+        <ul class="servicios" role="list">
+          <li class="servicio" data-reveal>
+            <svg class="icon icon--xl" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.5h7a2.25 2.25 0 0 1 2.25 2.25v4A2.25 2.25 0 0 1 13 13H9l-3.25 2.5V13a2 2 0 0 1-2-2V6.75A2.25 2.25 0 0 1 6 4.5z"/><path class="acc" d="M15.25 9h3a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H18v2.5L14.75 17H12a2 2 0 0 1-2-2v-2"/></svg>
+            <h3>Comunicación con huéspedes y reservas</h3>
+          </li>
+          <li class="servicio" data-reveal>
+            <svg class="icon icon--xl" viewBox="0 0 24 24" aria-hidden="true"><circle cx="7.5" cy="16.5" r="4"/><circle class="acc" cx="7.5" cy="16.5" r="1"/><path d="M10.33 13.67L19.5 4.5"/><path class="acc" d="M16.75 7.25l2.5 2.5M14.25 9.75l2 2"/></svg>
+            <h3>Entrada autónoma y llaves</h3>
+          </li>
+          <li class="servicio" data-reveal>
+            <svg class="icon icon--xl" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="2"/><path d="M5 7.75h14M8.25 5.6h.01M10.75 5.6h.01"/><circle class="acc" cx="12" cy="14.25" r="3.5"/></svg>
+            <h3>Limpieza y lavandería</h3>
+          </li>
+          <li class="servicio" data-reveal>
+            <svg class="icon icon--xl" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="8" width="17" height="11.5" rx="2"/><path d="M9 8V6.25C9 5.56 9.56 5 10.25 5h3.5c.69 0 1.25.56 1.25 1.25V8M3.5 12.75h17"/><path class="acc" d="M10 11.25v3M14 11.25v3"/></svg>
+            <h3>Reposición y mantenimiento</h3>
+          </li>
+          <li class="servicio" data-reveal>
+            <svg class="icon icon--xl" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4.75H7.25A2.25 2.25 0 0 0 5 7v12.25a2.25 2.25 0 0 0 2.25 2.25h9.5A2.25 2.25 0 0 0 19 19.25V7a2.25 2.25 0 0 0-2.25-2.25H15"/><rect x="9" y="3" width="6" height="3.5" rx="1"/><path class="acc" d="M8.75 11.5h6.5M8.75 15h6.5M8.75 18.5h3.5"/></svg>
+            <h3>Incidencias y registro de viajeros</h3>
+          </li>
+          <li class="servicio" data-reveal>
+            <svg class="icon icon--xl" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.75 12.38V5.25c0-.83.67-1.5 1.5-1.5h7.13c.4 0 .78.16 1.06.44l7.1 7.1c.59.59.59 1.54 0 2.12l-7.13 7.13c-.58.59-1.53.59-2.12 0l-7.1-7.1a1.5 1.5 0 0 1-.44-1.06z"/><circle class="acc" cx="8.25" cy="8.25" r="1.5"/></svg>
+            <h3>Anuncio, precios y reseñas</h3>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 6 · Cómo funciona -->
+    <section class="section" id="como-funciona" aria-labelledby="como-funciona-titulo">
+      <div class="container">
+        <div class="seccion-cabecera" data-reveal>
+          <h2 id="como-funciona-titulo">Cómo funciona</h2>
+        </div>
+        <ol class="pasos" role="list">
+          <li class="paso" data-reveal>
+            <h3><span class="paso-num"><span class="visually-hidden">Paso </span>1<span class="visually-hidden">.</span></span> Llamada de 15&nbsp;minutos.</h3>
+            <p>Revisamos tu anuncio gratis y te decimos qué mejoraríamos, aunque no trabajes con nosotros.</p>
+          </li>
+          <li class="paso" data-reveal>
+            <h3><span class="paso-num"><span class="visually-hidden">Paso </span>2<span class="visually-hidden">.</span></span> Visita de 30&nbsp;minutos al piso.</h3>
+            <p>Vemos la entrada, la limpieza y el anuncio, y te explicamos cómo lo llevaríamos.</p>
+          </li>
+          <li class="paso" data-reveal>
+            <h3><span class="paso-num"><span class="visually-hidden">Paso </span>3<span class="visually-hidden">.</span></span> Primer mes al 10&nbsp;% y sin permanencia.</h3>
+            <p>Si te convence, seguimos.</p>
+          </li>
+        </ol>
+        <div class="seccion-accion" data-reveal>
+          <a class="btn btn--primary" href="#contacto">Solicitar una llamada</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 · Condiciones -->
+    <section class="section" id="condiciones" aria-labelledby="condiciones-titulo">
+      <div class="container">
+        <div class="seccion-cabecera" data-reveal>
+          <h2 id="condiciones-titulo">Condiciones</h2>
+        </div>
+        <div class="condiciones" data-reveal>
+          <div class="condiciones-precio">
+            <p class="precio">
+              <span class="precio-cifra">20&nbsp;%</span>
+              <span class="precio-texto">de los ingresos por reservas</span>
+              <span class="precio-iva">IVA incluido</span>
+            </p>
+            <a class="btn btn--primary" href="#contacto">Solicitar una llamada</a>
+          </div>
+          <ul class="condiciones-lista" role="list">
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path class="acc" d="M5 12.5l4.25 4.25L19 7"/></svg>Primer mes al 10&nbsp;%</li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path class="acc" d="M5 12.5l4.25 4.25L19 7"/></svg>Sin permanencia</li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path class="acc" d="M5 12.5l4.25 4.25L19 7"/></svg>La limpieza la paga el huésped con la tarifa de limpieza</li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path class="acc" d="M5 12.5l4.25 4.25L19 7"/></svg>Resumen mensual</li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path class="acc" d="M5 12.5l4.25 4.25L19 7"/></svg>Respuesta en menos de 1&nbsp;hora</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8 · Solo pisos en regla -->
+    <section class="regla" id="en-regla" aria-labelledby="regla-titulo">
+      <div class="container">
+        <div class="regla-contenido" data-reveal>
+          <svg class="icon icon--xl" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.25l7 2.75v5.5c0 4.25-2.9 7.6-7 9.25-4.1-1.65-7-5-7-9.25V6z"/><path class="acc" d="M9 12.25l2.1 2.1 4-4.1"/></svg>
+          <h2 id="regla-titulo">Solo pisos en regla</h2>
+          <p>Trabajamos solo con viviendas que tienen número de registro de la Comunidad de Madrid y la documentación en regla.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9 · Opiniones: se rellena desde /data/opiniones.json y solo aparece si hay alguna -->
+    <section class="section" id="opiniones" aria-labelledby="opiniones-titulo" hidden>
+      <div class="container">
+        <div class="seccion-cabecera">
+          <h2 id="opiniones-titulo">Opiniones</h2>
+        </div>
+        <ul class="opiniones" role="list" data-opiniones></ul>
+      </div>
+    </section>
+
+    <!-- 10 · Quién está detrás -->
+    <section class="section" id="quien" aria-labelledby="quien-titulo">
+      <div class="container split">
+        <div class="split-cabecera" data-reveal>
+          <h2 id="quien-titulo">Quién está detrás</h2>
+        </div>
+        <div class="quien" data-reveal>
+          <p class="quien-texto">Soy Marcos Orio. He creado Delega Pisos para que tener un piso turístico en Madrid norte no te cueste tiempo ni tranquilidad. Mi trabajo es que tus huéspedes tengan respuesta rápida, que tu piso esté cuidado y que cada mes sepas cómo&nbsp;va. Cuando llames o escribas, hablarás directamente conmigo.</p>
+          <ul class="datos" role="list">
+            <li>
+              <a href="tel:+34687357665">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.6 3.75H6.4a2.15 2.15 0 0 0-2.15 2.33 15.5 15.5 0 0 0 13.67 13.67 2.15 2.15 0 0 0 2.33-2.15v-2.2a1 1 0 0 0-.68-.95l-3.04-1.02a1 1 0 0 0-1.07.29l-1.3 1.47a11.6 11.6 0 0 1-5.68-5.68l1.47-1.3a1 1 0 0 0 .29-1.07L9.55 4.43a1 1 0 0 0-.95-.68z"/></svg>
+                +34&nbsp;687&nbsp;357&nbsp;665
+              </a>
+            </li>
+            <li>
+              <a href="mailto:moriogarciaatance@gmail.com">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="M4 7l8 6 8-6"/></svg>
+                moriogarciaatance@gmail.com
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11 · Preguntas frecuentes -->
+    <section class="section" id="preguntas" aria-labelledby="preguntas-titulo">
+      <div class="container split">
+        <div class="split-cabecera" data-reveal>
+          <h2 id="preguntas-titulo">Preguntas frecuentes</h2>
+        </div>
+        <div class="faq" data-reveal>
+          <details>
+            <summary>¿Cuánto cobráis?<svg class="icon faq-icono" viewBox="0 0 24 24" aria-hidden="true"><path class="faq-v" d="M12 5v14"/><path d="M5 12h14"/></svg></summary>
+            <div class="faq-respuesta"><p>El 20&nbsp;% de los ingresos por reservas, IVA incluido. El primer mes, el 10&nbsp;%.</p></div>
+          </details>
+          <details>
+            <summary>¿Hay permanencia?<svg class="icon faq-icono" viewBox="0 0 24 24" aria-hidden="true"><path class="faq-v" d="M12 5v14"/><path d="M5 12h14"/></svg></summary>
+            <div class="faq-respuesta"><p>No. Primer mes al 10&nbsp;% y sin permanencia. Si te convence, seguimos.</p></div>
+          </details>
+          <details>
+            <summary>¿Quién paga la limpieza?<svg class="icon faq-icono" viewBox="0 0 24 24" aria-hidden="true"><path class="faq-v" d="M12 5v14"/><path d="M5 12h14"/></svg></summary>
+            <div class="faq-respuesta"><p>El huésped, con la tarifa de limpieza.</p></div>
+          </details>
+          <details>
+            <summary>¿En qué zonas trabajáis?<svg class="icon faq-icono" viewBox="0 0 24 24" aria-hidden="true"><path class="faq-v" d="M12 5v14"/><path d="M5 12h14"/></svg></summary>
+            <div class="faq-respuesta"><p>En Alcobendas, San Sebastián de los Reyes, Tres Cantos y Madrid norte.</p></div>
+          </details>
+          <details>
+            <summary>¿Qué necesito para empezar?<svg class="icon faq-icono" viewBox="0 0 24 24" aria-hidden="true"><path class="faq-v" d="M12 5v14"/><path d="M5 12h14"/></svg></summary>
+            <div class="faq-respuesta"><p>Una llamada de 15&nbsp;minutos y una visita de 30&nbsp;minutos al piso. Trabajamos solo con viviendas que tienen número de registro de la Comunidad de Madrid y la documentación en regla.</p></div>
+          </details>
+          <details>
+            <summary>¿Mi piso necesita licencia?<svg class="icon faq-icono" viewBox="0 0 24 24" aria-hidden="true"><path class="faq-v" d="M12 5v14"/><path d="M5 12h14"/></svg></summary>
+            <div class="faq-respuesta"><p>Trabajamos solo con viviendas que tienen número de registro de la Comunidad de Madrid y la documentación en regla. Lo revisamos en la visita. No damos asesoría legal.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12 · Contacto -->
+    <section class="section" id="contacto" aria-labelledby="contacto-titulo">
+      <div class="container">
+        <div class="seccion-cabecera" data-reveal>
+          <h2 id="contacto-titulo">Contacto</h2>
+        </div>
+        <div class="contacto-grid">
+          <form class="formulario" name="contacto" method="POST" action="/gracias.html" data-netlify="true" netlify-honeypot="bot-field" data-reveal>
+            <input type="hidden" name="form-name" value="contacto">
+            <input type="hidden" name="subject" data-remove-prefix value="Nueva solicitud de llamada · Delega Pisos">
+            <p class="campo-trampa" aria-hidden="true">
+              <label>No rellenes este campo <input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label>
+            </p>
+
+            <div class="campos-fila">
+              <div class="campo">
+                <label for="f-nombre">Nombre</label>
+                <input id="f-nombre" name="nombre" type="text" autocomplete="name" maxlength="80" required aria-describedby="e-nombre">
+                <p class="campo-error" id="e-nombre" hidden></p>
+              </div>
+              <div class="campo">
+                <label for="f-telefono">Teléfono</label>
+                <input id="f-telefono" name="telefono" type="tel" inputmode="tel" autocomplete="tel" maxlength="20" required aria-describedby="e-telefono">
+                <p class="campo-error" id="e-telefono" hidden></p>
+              </div>
+            </div>
+
+            <div class="campo">
+              <label for="f-zona">Zona del piso</label>
+              <select id="f-zona" name="zona" required aria-describedby="e-zona">
+                <option value="" selected disabled>Elige una zona</option>
+                <option>Alcobendas o Sanse</option>
+                <option>Tres Cantos</option>
+                <option>Madrid norte</option>
+                <option>Otra zona</option>
+              </select>
+              <p class="campo-error" id="e-zona" hidden></p>
+            </div>
+
+            <div class="campo">
+              <label for="f-mensaje">Mensaje <span class="opcional">(opcional)</span></label>
+              <textarea id="f-mensaje" name="mensaje" rows="4" maxlength="1500"></textarea>
+            </div>
+
+            <div class="campo campo--casilla">
+              <input id="f-consentimiento" name="consentimiento" type="checkbox" value="Sí" required aria-describedby="e-consentimiento">
+              <label for="f-consentimiento">Acepto que Delega Pisos me llame y me escriba por WhatsApp para informarme de su servicio. He leído la <a href="/privacidad.html">política de privacidad</a>.</label>
+              <p class="campo-error" id="e-consentimiento" hidden></p>
+            </div>
+
+            <button class="btn btn--primary btn--bloque" type="submit">Solicitar una llamada</button>
+          </form>
+
+          <div class="contacto-datos" data-reveal>
+            <p class="contacto-nombre">Marcos Orio</p>
+            <ul class="datos" role="list">
+              <li>
+                <a href="tel:+34687357665">
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.6 3.75H6.4a2.15 2.15 0 0 0-2.15 2.33 15.5 15.5 0 0 0 13.67 13.67 2.15 2.15 0 0 0 2.33-2.15v-2.2a1 1 0 0 0-.68-.95l-3.04-1.02a1 1 0 0 0-1.07.29l-1.3 1.47a11.6 11.6 0 0 1-5.68-5.68l1.47-1.3a1 1 0 0 0 .29-1.07L9.55 4.43a1 1 0 0 0-.95-.68z"/></svg>
+                  +34&nbsp;687&nbsp;357&nbsp;665
+                </a>
+              </li>
+              <li>
+                <a href="mailto:moriogarciaatance@gmail.com">
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="M4 7l8 6 8-6"/></svg>
+                  moriogarciaatance@gmail.com
+                </a>
+              </li>
+            </ul>
+            <a class="btn btn--secondary" href="https://wa.me/34687357665?text=Hola%2C%20tengo%20un%20piso%20tur%C3%ADstico%20y%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener" aria-describedby="nueva-pestana">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.75a8.25 8.25 0 0 0-7.17 12.33L3.75 20.25l4.3-1.04A8.25 8.25 0 1 0 12 3.75z"/></svg>
+              Escribir por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <a class="brand" href="#inicio">
+        <img src="/img/logo-delega-pisos.webp" srcset="/img/logo-delega-pisos.webp 1x, /img/logo-delega-pisos@2x.webp 2x" width="181" height="40" alt="Delega Pisos, inicio">
+      </a>
+      <ul class="footer-contacto" role="list">
+        <li><a href="mailto:moriogarciaatance@gmail.com">moriogarciaatance@gmail.com</a></li>
+        <li><a href="tel:+34687357665">+34&nbsp;687&nbsp;357&nbsp;665</a></li>
+        <li><a href="https://wa.me/34687357665?text=Hola%2C%20tengo%20un%20piso%20tur%C3%ADstico%20y%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener" aria-describedby="nueva-pestana">WhatsApp</a></li>
+      </ul>
+      <div class="footer-legal">
+        <ul role="list">
+          <li><a href="/aviso-legal.html">Aviso legal</a></li>
+          <li><a href="/privacidad.html">Política de privacidad</a></li>
+        </ul>
+        <p>© 2026 Delega Pisos</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="barra-movil">
+    <a class="barra-btn barra-btn--llamar" href="tel:+34687357665">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.6 3.75H6.4a2.15 2.15 0 0 0-2.15 2.33 15.5 15.5 0 0 0 13.67 13.67 2.15 2.15 0 0 0 2.33-2.15v-2.2a1 1 0 0 0-.68-.95l-3.04-1.02a1 1 0 0 0-1.07.29l-1.3 1.47a11.6 11.6 0 0 1-5.68-5.68l1.47-1.3a1 1 0 0 0 .29-1.07L9.55 4.43a1 1 0 0 0-.95-.68z"/></svg>
+      Llamar
+    </a>
+    <a class="barra-btn barra-btn--whatsapp" href="https://wa.me/34687357665?text=Hola%2C%20tengo%20un%20piso%20tur%C3%ADstico%20y%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener" aria-describedby="nueva-pestana">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.75a8.25 8.25 0 0 0-7.17 12.33L3.75 20.25l4.3-1.04A8.25 8.25 0 1 0 12 3.75z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</body>
+</html>

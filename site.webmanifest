@@ -1,0 +1,13 @@
+{
+  "name": "Delega Pisos",
+  "short_name": "Delega Pisos",
+  "lang": "es",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#FAF8F5",
+  "theme_color": "#FAF8F5",
+  "icons": [
+    { "src": "/img/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/img/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
