@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- [PENDIENTE: dominio] Sustituir https://dominio-pendiente.example por el dominio definitivo -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://dominio-pendiente.example/</loc>
-    <lastmod>2026-10-02</lastmod>
+    <loc>https://delegapisos.netlify.app/</loc>
+    <lastmod>2026-10-03</lastmod>
   </url>
   <url>
-    <loc>https://dominio-pendiente.example/privacidad.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <loc>https://delegapisos.netlify.app/privacidad.html</loc>
+    <lastmod>2026-10-03</lastmod>
   </url>
   <url>
-    <loc>https://dominio-pendiente.example/aviso-legal.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <loc>https://delegapisos.netlify.app/aviso-legal.html</loc>
+    <lastmod>2026-10-03</lastmod>
   </url>
 </urlset>

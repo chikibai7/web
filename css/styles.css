@@ -317,22 +317,6 @@ a {
   opacity: 0.75;
 }
 
-/* ---------- Marcas de contenido pendiente ---------- */
-
-.pendiente {
-  padding: 0.1em 0.35em;
-  border-radius: 4px;
-  outline: 1px dashed var(--terracota);
-  outline-offset: 1px;
-  background: #FBEAE4;
-  color: var(--tinta);
-  font-family: var(--sans);
-  font-size: 0.8125em;
-  line-height: 1.6;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-}
-
 /* ---------- Cabecera ---------- */
 
 .site-header {
@@ -548,15 +532,16 @@ a {
 }
 
 /* ---------- 2 · Portada ---------- */
+/* Portada solo tipográfica: el titular manda y debajo, en dos columnas, subtítulo y acciones. */
 
 .hero {
-  padding-block: clamp(2rem, 1rem + 4vw, 5.5rem) clamp(3.5rem, 2rem + 5vw, 7rem);
+  padding-block: clamp(2.5rem, 1rem + 5vw, 7rem) clamp(3.5rem, 2rem + 5vw, 7rem);
 }
 
-.hero-grid {
-  display: grid;
-  gap: 3rem;
-  align-items: center;
+/* Tamaño calculado para que «Nosotros nos ocupamos del día a día.» quepa en una línea desde 768 px */
+.hero h1 {
+  font-size: clamp(2.375rem, 5.8vw - 0.25rem, 4rem);
+  line-height: 1.06;
 }
 
 .h1-suave {
@@ -613,34 +598,6 @@ a {
   background: var(--terracota);
 }
 
-.hero-media {
-  width: 100%;
-  max-width: 26rem;
-}
-
-.hero-foto,
-.pendiente-foto {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  border-radius: var(--radio);
-  object-fit: cover;
-}
-
-.pendiente-foto {
-  display: grid;
-  place-items: center;
-  padding: 1.5rem;
-  border: 1px dashed var(--borde-campo);
-  background: var(--blanco);
-  text-align: center;
-}
-
-.hero-media figcaption {
-  margin-top: 0.75rem;
-  color: var(--tinta-suave);
-  font-size: 0.8125rem;
-}
-
 @media (min-width: 30em) {
   .hero-actions {
     flex-direction: row;
@@ -648,39 +605,19 @@ a {
   }
 }
 
-@media (min-width: 48em) and (max-width: 63.99em) {
-  .hero-copy {
-    display: contents;
-  }
-
-  .hero-grid {
-    grid-template-columns: minmax(0, 1fr) 17rem;
-    grid-template-rows: auto auto auto auto 1fr;
-    grid-template-areas:
-      "titulo titulo"
-      "sub    media"
-      "botones media"
-      "nota   media"
-      ".      media";
-    gap: 0 2.5rem;
-    align-items: start;
-  }
-
-  .hero h1 { grid-area: titulo; margin-bottom: 2rem; }
-  .hero-sub { grid-area: sub; margin-top: 0; }
-  .hero-actions { grid-area: botones; flex-direction: column; }
-  .hero-nota { grid-area: nota; }
-  .hero-media { grid-area: media; }
-}
-
 @media (min-width: 64em) {
-  .hero-grid {
-    grid-template-columns: minmax(0, 5fr) minmax(0, 3fr);
-    gap: clamp(3rem, 1rem + 4vw, 5.5rem);
+  .hero-pie {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: 4rem;
+    margin-top: 3.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--lineas);
   }
 
-  .hero-media {
-    justify-self: end;
+  .hero-sub,
+  .hero-actions {
+    margin-top: 0;
   }
 }
 
@@ -896,6 +833,13 @@ a {
   margin-top: 0.875rem;
   color: var(--tinta);
   font-size: 1.125rem;
+}
+
+.precio-iva {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--tinta-suave);
+  font-size: 0.875rem;
 }
 
 .condiciones-lista {

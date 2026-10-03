@@ -15,15 +15,15 @@
   <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
 
-  <!-- [PENDIENTE: dominio] Sustituir https://dominio-pendiente.example por el dominio definitivo (ver README) -->
-  <link rel="canonical" href="https://dominio-pendiente.example/">
+  <!-- Dirección provisional: Netlify la cambia por la real al desplegar (ver netlify.toml) -->
+  <link rel="canonical" href="https://delegapisos.netlify.app/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="Delega Pisos">
   <meta property="og:title" content="Delega Pisos · Gestión de pisos turísticos en Madrid norte">
   <meta property="og:description" content="Gestión integral de viviendas turísticas en Alcobendas, San Sebastián de los Reyes, Tres Cantos y Madrid norte.">
-  <meta property="og:url" content="https://dominio-pendiente.example/">
-  <meta property="og:image" content="https://dominio-pendiente.example/img/og-image.png">
+  <meta property="og:url" content="https://delegapisos.netlify.app/">
+  <meta property="og:image" content="https://delegapisos.netlify.app/img/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Logotipo de Delega Pisos sobre fondo azul marino">
@@ -35,9 +35,9 @@
     "@type": "ProfessionalService",
     "name": "Delega Pisos",
     "description": "Gestión integral de viviendas turísticas en Alcobendas, San Sebastián de los Reyes, Tres Cantos y Madrid norte.",
-    "url": "https://dominio-pendiente.example/",
-    "logo": "https://dominio-pendiente.example/img/logo-horizontal.png",
-    "image": "https://dominio-pendiente.example/img/og-image.png",
+    "url": "https://delegapisos.netlify.app/",
+    "logo": "https://delegapisos.netlify.app/img/logo-horizontal.png",
+    "image": "https://delegapisos.netlify.app/img/og-image.png",
     "telephone": "+34 687 357 665",
     "email": "moriogarciaatance@gmail.com",
     "areaServed": [
@@ -93,32 +93,25 @@
 
     <!-- 2 · Portada -->
     <section class="hero" id="inicio" aria-labelledby="hero-titulo">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <h1 id="hero-titulo">Delega tu piso turístico. <span class="h1-suave">Nosotros nos ocupamos del día&nbsp;a&nbsp;día.</span></h1>
+      <div class="container">
+        <h1 id="hero-titulo">Delega tu piso turístico. <span class="h1-suave">Nosotros nos ocupamos del día&nbsp;a&nbsp;día.</span></h1>
+        <div class="hero-pie">
           <p class="hero-sub">Gestión integral de viviendas turísticas en Alcobendas, San Sebastián de los Reyes, Tres Cantos y Madrid norte.</p>
-          <div class="hero-actions">
-            <a class="btn btn--primary" href="#contacto">Solicitar una llamada</a>
-            <a class="btn btn--secondary" href="https://wa.me/34687357665?text=Hola%2C%20tengo%20un%20piso%20tur%C3%ADstico%20y%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener" aria-describedby="nueva-pestana">
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.75a8.25 8.25 0 0 0-7.17 12.33L3.75 20.25l4.3-1.04A8.25 8.25 0 1 0 12 3.75z"/></svg>
-              Escribir por WhatsApp
-            </a>
+          <div class="hero-cta">
+            <div class="hero-actions">
+              <a class="btn btn--primary" href="#contacto">Solicitar una llamada</a>
+              <a class="btn btn--secondary" href="https://wa.me/34687357665?text=Hola%2C%20tengo%20un%20piso%20tur%C3%ADstico%20y%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener" aria-describedby="nueva-pestana">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.75a8.25 8.25 0 0 0-7.17 12.33L3.75 20.25l4.3-1.04A8.25 8.25 0 1 0 12 3.75z"/></svg>
+                Escribir por WhatsApp
+              </a>
+            </div>
+            <ul class="hero-nota" role="list">
+              <li>Primer mes al 10&nbsp;%</li>
+              <li>Sin permanencia</li>
+              <li>Solo pisos con licencia</li>
+            </ul>
           </div>
-          <ul class="hero-nota" role="list">
-            <li>Primer mes al 10&nbsp;%</li>
-            <li>Sin permanencia</li>
-            <li>Solo pisos con licencia</li>
-          </ul>
         </div>
-
-        <figure class="hero-media">
-          <!-- [PENDIENTE: marcos.jpg] Cuando llegue la foto, sustituir este bloque por:
-          <img class="hero-foto" src="/img/marcos-640.webp" srcset="/img/marcos-640.webp 640w, /img/marcos-1280.webp 1280w" sizes="(min-width: 64em) 440px, calc(100vw - 40px)" width="640" height="800" alt="Marcos Orio, de Delega Pisos" fetchpriority="high"> -->
-          <div class="pendiente-foto">
-            <p class="pendiente">[PENDIENTE: marcos.jpg, foto real de Marcos Orio]</p>
-          </div>
-          <figcaption>Marcos Orio</figcaption>
-        </figure>
       </div>
     </section>
 
@@ -242,6 +235,7 @@
             <p class="precio">
               <span class="precio-cifra">20&nbsp;%</span>
               <span class="precio-texto">de los ingresos por reservas</span>
+              <span class="precio-iva">IVA incluido</span>
             </p>
             <a class="btn btn--primary" href="#contacto">Solicitar una llamada</a>
           </div>
@@ -284,7 +278,7 @@
           <h2 id="quien-titulo">Quién está detrás</h2>
         </div>
         <div class="quien" data-reveal>
-          <p class="quien-texto">Soy Marcos Orio. <mark class="pendiente">[PENDIENTE: 2-3 frases de Marcos sobre quién es y por qué monta Delega Pisos]</mark></p>
+          <p class="quien-texto">Soy Marcos Orio. He creado Delega Pisos para que tener un piso turístico en Madrid norte no te cueste tiempo ni tranquilidad. Mi trabajo es que tus huéspedes tengan respuesta rápida, que tu piso esté cuidado y que cada mes sepas cómo&nbsp;va. Cuando llames o escribas, hablarás directamente conmigo.</p>
           <ul class="datos" role="list">
             <li>
               <a href="tel:+34687357665">
@@ -312,7 +306,7 @@
         <div class="faq" data-reveal>
           <details>
             <summary>¿Cuánto cobráis?<svg class="icon faq-icono" viewBox="0 0 24 24" aria-hidden="true"><path class="faq-v" d="M12 5v14"/><path d="M5 12h14"/></svg></summary>
-            <div class="faq-respuesta"><p>El 20&nbsp;% de los ingresos por reservas. El primer mes, el 10&nbsp;%.</p></div>
+            <div class="faq-respuesta"><p>El 20&nbsp;% de los ingresos por reservas, IVA incluido. El primer mes, el 10&nbsp;%.</p></div>
           </details>
           <details>
             <summary>¿Hay permanencia?<svg class="icon faq-icono" viewBox="0 0 24 24" aria-hidden="true"><path class="faq-v" d="M12 5v14"/><path d="M5 12h14"/></svg></summary>

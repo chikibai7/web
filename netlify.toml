@@ -1,6 +1,10 @@
-# Sitio estático: no hay comando de compilación; se publica la raíz del repositorio.
+# Sitio estático: se publica la raíz del repositorio tal cual.
+# Único paso al desplegar: cambiar la dirección provisional (delegapisos.netlify.app) por la real
+# del proyecto, que Netlify da en $URL. Vale para el nombre que asigne Netlify y para un dominio
+# propio en el futuro (tras añadirlo, basta con volver a desplegar).
 [build]
   publish = "."
+  command = '[ -z "$URL" ] || sed -i "s#https://delegapisos.netlify.app#$URL#g" index.html privacidad.html aviso-legal.html robots.txt sitemap.xml'
 
 # Cabeceras de seguridad. La CSP solo permite recursos del propio dominio:
 # si alguien añade un script, una fuente o un iframe de terceros, el navegador lo bloquea.

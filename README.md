@@ -1,6 +1,6 @@
 # Delega Pisos — web
 
-Web estática de Delega Pisos: HTML, CSS y JavaScript sin frameworks ni compilación, pensada para Netlify.
+Web estática de Delega Pisos: HTML, CSS y JavaScript sin frameworks, pensada para Netlify.
 No carga nada de terceros (ni analítica, ni fuentes remotas, ni CDNs) y no instala cookies.
 
 ## Estructura
@@ -16,7 +16,7 @@ fonts/              Lora e Inter en woff2 (licencia OFL incluida)
 img/                Logos, favicons, og-image y originales (portada.png es la portada de redes; no se usa en la web)
 data/opiniones.json Opiniones; si está vacío, la sección no aparece
 robots.txt, sitemap.xml, site.webmanifest, favicon.ico
-netlify.toml        Publicación y cabeceras de seguridad (la CSP bloquea cualquier recurso de terceros)
+netlify.toml        Publicación, dirección web y cabeceras de seguridad (la CSP bloquea cualquier recurso de terceros)
 ```
 
 ## Verla en local
@@ -27,25 +27,17 @@ python3 -m http.server 8000
 
 y abrir http://localhost:8000. El formulario solo funciona una vez publicado en Netlify.
 
-## Pendientes
+## Dirección web
 
-Todo lo que falta está marcado en el código como `[PENDIENTE: …]`. Para localizarlo:
+Las direcciones absolutas (enlace canónico, Open Graph, datos estructurados, `robots.txt` y `sitemap.xml`)
+usan `https://delegapisos.netlify.app`. Al desplegar, `netlify.toml` la cambia por la dirección real
+del proyecto (`$URL`), así que no hay que tocar nada:
 
-```
-grep -rn "PENDIENTE" --include=*.html --include=*.txt --include=*.xml .
-```
+- si Netlify asigna otro nombre, se usa ese;
+- si algún día hay dominio propio, se añade en *Domain management* y se vuelve a desplegar.
 
-- **Foto de Marcos** (`index.html`, portada): subir `marcos.jpg` a `img/`, crear `img/marcos-640.webp` y `img/marcos-1280.webp` (por ejemplo con squoosh.app) y sustituir el bloque marcado por la etiqueta `<img>` que hay comentada justo encima.
-- **Texto de Marcos** (`index.html`, «Quién está detrás»).
-- **NIF y dirección** (`privacidad.html` y `aviso-legal.html`).
-- **IVA** (`aviso-legal.html`, apartado 4): «incluyen IVA» o «no incluyen IVA».
-- **Dominio**: sustituir `https://dominio-pendiente.example` en todos los archivos:
-
-  ```
-  grep -rl "dominio-pendiente.example" . | xargs sed -i 's#https://dominio-pendiente.example#https://www.tudominio.es#g'
-  ```
-
-  (en macOS: `sed -i ''`).
+Conviene llamar al proyecto `delegapisos` en Netlify (*Project configuration → General → Project details → Change project name*)
+para que la dirección sea legible.
 
 ## Opiniones
 
@@ -67,8 +59,8 @@ Solo opiniones reales y con permiso de quien las escribe. Formato de `data/opini
 
 ## Netlify
 
-1. *Add new site → Import an existing project →* GitHub → este repositorio, rama `main`.
-2. Sin comando de compilación; directorio de publicación `.` (ya viene en `netlify.toml`).
+1. *Add new project → Import an existing project →* GitHub → este repositorio, rama `main`.
+2. Todo lo demás viene en `netlify.toml`: no hay que rellenar comando ni carpeta.
 3. *Forms → Enable form detection* y volver a desplegar.
-4. *Site configuration → Notifications → Emails and webhooks → Form submission notifications →*
+4. *Project configuration → Notifications → Emails and webhooks → Form submission notifications →*
    *Add notification → Email notification*, formulario `contacto`, email `moriogarciaatance@gmail.com`.
