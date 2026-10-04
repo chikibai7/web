@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Delega Pisos · Gestión de pisos turísticos en Madrid norte</title>
   <meta name="description" content="Gestión integral de viviendas turísticas en Alcobendas, San Sebastián de los Reyes, Tres Cantos y Madrid norte. Primer mes al 10 %, sin permanencia y solo pisos con licencia.">
-  <meta name="theme-color" content="#FAF8F5">
+  <meta name="theme-color" content="#14213D">
 
   <link rel="preload" href="/fonts/lora-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/inter-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
@@ -55,10 +55,10 @@
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <span id="nueva-pestana" hidden>Se abre en una pestaña nueva</span>
 
-  <header class="site-header">
+  <header class="site-header tono-navy">
     <div class="container header-inner">
       <a class="brand" href="#inicio">
-        <img src="/img/logo-delega-pisos.webp" srcset="/img/logo-delega-pisos.webp 1x, /img/logo-delega-pisos@2x.webp 2x" width="181" height="40" alt="Delega Pisos, inicio">
+        <img src="/img/logo-delega-pisos-claro.webp" srcset="/img/logo-delega-pisos-claro.webp 1x, /img/logo-delega-pisos-claro@2x.webp 2x" width="181" height="40" alt="Delega Pisos, inicio">
       </a>
 
       <nav class="nav" aria-label="Principal">
@@ -92,7 +92,7 @@
   <main id="contenido">
 
     <!-- 2 · Portada -->
-    <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+    <section class="hero tono-navy" id="inicio" aria-labelledby="hero-titulo">
       <div class="container">
         <h1 id="hero-titulo">Delega tu piso turístico. <span class="h1-suave">Nosotros nos ocupamos del día&nbsp;a&nbsp;día.</span></h1>
         <div class="hero-pie">
@@ -112,6 +112,13 @@
             </ul>
           </div>
         </div>
+        <figure class="hero-foto">
+          <picture>
+            <source media="(max-width: 47.99em)" srcset="/img/foto-salon-movil-400.webp 400w, /img/foto-salon-movil-700.webp 700w, /img/foto-salon-movil-1000.webp 1000w, /img/foto-salon-movil-1320.webp 1320w" sizes="calc(100vw - 40px)" width="1320" height="990">
+            <img src="/img/foto-salon-1120.webp" srcset="/img/foto-salon-800.webp 800w, /img/foto-salon-1120.webp 1120w, /img/foto-salon-1600.webp 1600w, /img/foto-salon-2240.webp 2240w" sizes="(min-width: 72em) 1120px, (min-width: 64em) calc(100vw - 80px), calc(100vw - 64px)" width="1120" height="509" alt="Salón comedor diáfano con cocina abierta, suelo de madera y escalera" fetchpriority="high">
+          </picture>
+          <figcaption>Imagen ilustrativa</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -141,10 +148,14 @@
     </section>
 
     <!-- 4 · Para quién es -->
-    <section class="section" id="para-quien" aria-labelledby="para-quien-titulo">
-      <div class="container split">
-        <div class="split-cabecera" data-reveal>
+    <section class="section tono-arena" id="para-quien" aria-labelledby="para-quien-titulo">
+      <div class="container split split--foto">
+        <div class="split-cabecera split-cabecera--foto" data-reveal>
           <h2 id="para-quien-titulo">Para quién es</h2>
+          <figure class="foto-seccion">
+            <img src="/img/foto-recibidor-700.webp" srcset="/img/foto-recibidor-400.webp 400w, /img/foto-recibidor-700.webp 700w, /img/foto-recibidor-1000.webp 1000w, /img/foto-recibidor-1320.webp 1320w" sizes="(min-width: 72em) 440px, (min-width: 64em) 36vw, calc(100vw - 40px)" width="700" height="875" alt="Recibidor con suelo claro que da a un salón luminoso con sofás y alfombra" loading="lazy" decoding="async">
+            <figcaption>Imagen ilustrativa</figcaption>
+          </figure>
         </div>
         <div class="perfiles">
           <div class="perfil" data-reveal>
@@ -199,7 +210,7 @@
     </section>
 
     <!-- 6 · Cómo funciona -->
-    <section class="section" id="como-funciona" aria-labelledby="como-funciona-titulo">
+    <section class="section tono-arena" id="como-funciona" aria-labelledby="como-funciona-titulo">
       <div class="container">
         <div class="seccion-cabecera" data-reveal>
           <h2 id="como-funciona-titulo">Cómo funciona</h2>
@@ -251,18 +262,22 @@
     </section>
 
     <!-- 8 · Solo pisos en regla -->
-    <section class="regla" id="en-regla" aria-labelledby="regla-titulo">
-      <div class="container">
+    <section class="regla tono-navy" id="en-regla" aria-labelledby="regla-titulo">
+      <div class="container regla-grid">
         <div class="regla-contenido" data-reveal>
           <svg class="icon icon--xl" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.25l7 2.75v5.5c0 4.25-2.9 7.6-7 9.25-4.1-1.65-7-5-7-9.25V6z"/><path class="acc" d="M9 12.25l2.1 2.1 4-4.1"/></svg>
           <h2 id="regla-titulo">Solo pisos en regla</h2>
           <p>Trabajamos solo con viviendas que tienen número de registro de la Comunidad de Madrid y la documentación en regla.</p>
         </div>
+        <figure class="foto-seccion regla-foto" data-reveal>
+          <img src="/img/foto-fachada-700.webp" srcset="/img/foto-fachada-400.webp 400w, /img/foto-fachada-700.webp 700w, /img/foto-fachada-1000.webp 1000w, /img/foto-fachada-1400.webp 1400w" sizes="(min-width: 72em) 440px, (min-width: 64em) 36vw, calc(100vw - 40px)" width="700" height="525" alt="Fachada de una vivienda moderna con jardín delantero" loading="lazy" decoding="async">
+          <figcaption>Imagen ilustrativa</figcaption>
+        </figure>
       </div>
     </section>
 
     <!-- 9 · Opiniones: se rellena desde /data/opiniones.json y solo aparece si hay alguna -->
-    <section class="section" id="opiniones" aria-labelledby="opiniones-titulo" hidden>
+    <section class="section tono-arena" id="opiniones" aria-labelledby="opiniones-titulo" hidden>
       <div class="container">
         <div class="seccion-cabecera">
           <h2 id="opiniones-titulo">Opiniones</h2>
@@ -298,7 +313,7 @@
     </section>
 
     <!-- 11 · Preguntas frecuentes -->
-    <section class="section" id="preguntas" aria-labelledby="preguntas-titulo">
+    <section class="section tono-arena" id="preguntas" aria-labelledby="preguntas-titulo">
       <div class="container split">
         <div class="split-cabecera" data-reveal>
           <h2 id="preguntas-titulo">Preguntas frecuentes</h2>
@@ -333,7 +348,7 @@
     </section>
 
     <!-- 12 · Contacto -->
-    <section class="section" id="contacto" aria-labelledby="contacto-titulo">
+    <section class="section tono-navy" id="contacto" aria-labelledby="contacto-titulo">
       <div class="container">
         <div class="seccion-cabecera" data-reveal>
           <h2 id="contacto-titulo">Contacto</h2>
@@ -412,10 +427,10 @@
 
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer tono-profundo">
     <div class="container footer-grid">
       <a class="brand" href="#inicio">
-        <img src="/img/logo-delega-pisos.webp" srcset="/img/logo-delega-pisos.webp 1x, /img/logo-delega-pisos@2x.webp 2x" width="181" height="40" alt="Delega Pisos, inicio">
+        <img src="/img/logo-delega-pisos-claro.webp" srcset="/img/logo-delega-pisos-claro.webp 1x, /img/logo-delega-pisos-claro@2x.webp 2x" width="181" height="40" alt="Delega Pisos, inicio">
       </a>
       <ul class="footer-contacto" role="list">
         <li><a href="mailto:moriogarciaatance@gmail.com">moriogarciaatance@gmail.com</a></li>

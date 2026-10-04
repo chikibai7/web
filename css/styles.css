@@ -74,6 +74,20 @@
   --blanco: #FFFFFF;
   --terracota-hover: #E8957F; /* con texto azul: 6,9:1 */
   --error: #A33A20;          /* 6,2:1 sobre el fondo */
+  --arena: #F1EBE2;          /* secciones alternas; texto secundario a 6:1 */
+  --arena-linea: #DDD5C8;
+  --navy-profundo: #0F1A31;  /* pie */
+  --claro-suave: #B9C1CF;    /* texto secundario sobre azul: 8,8:1 */
+  --linea-navy: #33405F;
+  --linea-base: #E7E3DD;
+
+  /* Tonos de zona: cada sección los redefine y los componentes los heredan */
+  --superficie: var(--fondo);
+  --titulos: var(--navy);
+  --texto: var(--tinta);
+  --texto-suave: var(--tinta-suave);
+  --enlace: var(--navy);
+  --foco: var(--navy);
 
   --serif: "Lora", "Lora Georgia", "Lora Noto", Georgia, serif;
   --sans: "Inter", "Inter Arial", "Inter Roboto", Arial, sans-serif;
@@ -83,6 +97,7 @@
   --gutter: 20px;
   --header-h: 64px;
   --seccion: clamp(4.5rem, 3rem + 6vw, 8rem);
+  --solape: clamp(3rem, 1.5rem + 5vw, 6.5rem); /* cuánto baja la foto de portada sobre la franja */
   --ease: cubic-bezier(0.2, 0.65, 0.3, 1);
 }
 
@@ -119,7 +134,7 @@ html.menu-abierto {
 body {
   margin: 0;
   background: var(--fondo);
-  color: var(--tinta);
+  color: var(--texto);
   font-family: var(--sans);
   font-size: clamp(1.0625rem, 1rem + 0.25vw, 1.125rem);
   line-height: 1.6;
@@ -154,7 +169,7 @@ h1, h2, h3, p, ul, ol, dl, dd, figure, blockquote {
 h1, h2, h3 {
   font-family: var(--serif);
   font-weight: 400;
-  color: var(--navy);
+  color: var(--titulos);
   text-wrap: balance;
 }
 
@@ -177,20 +192,20 @@ h3 {
 }
 
 a {
-  color: var(--navy);
+  color: var(--enlace);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.2em;
 }
 
 :focus-visible {
-  outline: 2px solid var(--navy);
+  outline: 2px solid var(--foco);
   outline-offset: 3px;
   border-radius: 2px;
 }
 
 ::selection {
-  background: var(--navy);
-  color: var(--fondo);
+  background: var(--titulos);
+  color: var(--superficie);
 }
 
 .visually-hidden {
@@ -213,8 +228,8 @@ a {
   z-index: 100;
   padding: 0.75rem 1rem;
   border-radius: var(--radio);
-  background: var(--navy);
-  color: var(--fondo);
+  background: var(--terracota);
+  color: var(--navy);
   font-weight: 600;
   text-decoration: none;
 }
@@ -228,6 +243,49 @@ a {
   max-width: calc(var(--ancho) + 2 * var(--gutter));
   margin-inline: auto;
   padding-inline: max(var(--gutter), env(safe-area-inset-left)) max(var(--gutter), env(safe-area-inset-right));
+}
+
+/* ---------- Tonos de sección ---------- */
+
+.tono-arena,
+.tono-navy,
+.tono-profundo {
+  background: var(--superficie);
+  color: var(--texto);
+}
+
+.tono-arena {
+  --superficie: var(--arena);
+  --lineas: var(--arena-linea);
+}
+
+.tono-navy,
+.tono-profundo {
+  --superficie: var(--navy);
+  --titulos: var(--fondo);
+  --texto: var(--fondo);
+  --texto-suave: var(--claro-suave);
+  --enlace: var(--fondo);
+  --foco: var(--fondo);
+  --lineas: var(--linea-navy);
+}
+
+.tono-profundo {
+  --superficie: var(--navy-profundo);
+}
+
+/* Tarjetas blancas: recuperan los tonos claros aunque estén sobre azul o arena */
+.condiciones,
+.formulario,
+.opinion {
+  --superficie: var(--blanco);
+  --titulos: var(--navy);
+  --texto: var(--tinta);
+  --texto-suave: var(--tinta-suave);
+  --enlace: var(--navy);
+  --foco: var(--navy);
+  --lineas: var(--linea-base);
+  color: var(--texto);
 }
 
 /* ---------- Iconos de línea ---------- */
@@ -292,14 +350,14 @@ a {
 }
 
 .btn--secondary {
-  border-color: var(--navy);
+  border-color: var(--titulos);
   background: transparent;
-  color: var(--navy);
+  color: var(--titulos);
 }
 
 .btn--secondary:hover {
-  background: var(--navy);
-  color: var(--fondo);
+  background: var(--titulos);
+  color: var(--superficie);
 }
 
 .btn--sm {
@@ -323,7 +381,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: var(--fondo);
+  background: var(--superficie);
   border-bottom: 1px solid transparent;
   transition: border-color 0.25s ease;
 }
@@ -378,7 +436,7 @@ a {
   border: 0;
   border-radius: var(--radio);
   background: none;
-  color: var(--navy);
+  color: var(--titulos);
   font: 500 1rem/1 var(--sans);
   cursor: pointer;
 }
@@ -402,7 +460,7 @@ a {
   padding: 0.5rem var(--gutter) calc(2rem + env(safe-area-inset-bottom));
   overflow-y: auto;
   border-top: 1px solid var(--lineas);
-  background: var(--fondo);
+  background: var(--superficie);
 }
 
 .nav.is-open .nav-panel {
@@ -413,7 +471,7 @@ a {
   display: block;
   padding-block: 1rem;
   border-bottom: 1px solid var(--lineas);
-  color: var(--navy);
+  color: var(--titulos);
   font-family: var(--serif);
   font-size: 1.625rem;
   line-height: 1.2;
@@ -483,18 +541,6 @@ a {
   padding-block: var(--seccion);
 }
 
-/* Filete fino entre secciones claras consecutivas, al ancho del contenido */
-.section:not([hidden]) + .section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: min(var(--ancho), calc(100% - 2 * var(--gutter)));
-  height: 1px;
-  transform: translateX(-50%);
-  background: var(--lineas);
-}
-
 .section h2::before,
 .regla h2::before {
   content: "";
@@ -535,7 +581,8 @@ a {
 /* Portada solo tipográfica: el titular manda y debajo, en dos columnas, subtítulo y acciones. */
 
 .hero {
-  padding-block: clamp(2.5rem, 1rem + 5vw, 7rem) clamp(3.5rem, 2rem + 5vw, 7rem);
+  display: flow-root;
+  padding-top: clamp(2.5rem, 1rem + 5vw, 7rem);
 }
 
 /* Tamaño calculado para que «Nosotros nos ocupamos del día a día.» quepa en una línea desde 768 px */
@@ -546,7 +593,7 @@ a {
 
 .h1-suave {
   display: block;
-  color: var(--tinta-suave);
+  color: var(--texto-suave);
   text-wrap: wrap; /* el reparto equilibrado dejaba «ocupamos» solo en móvil */
 }
 
@@ -562,7 +609,7 @@ a {
 .hero-sub {
   max-width: 34rem;
   margin-top: 1.5rem;
-  color: var(--tinta-suave);
+  color: var(--texto-suave);
   font-size: clamp(1.0625rem, 1rem + 0.35vw, 1.25rem);
   line-height: 1.55;
 }
@@ -579,7 +626,7 @@ a {
   flex-wrap: wrap;
   gap: 0.375rem 1.5rem;
   margin-top: 1.5rem;
-  color: var(--tinta-suave);
+  color: var(--texto-suave);
   font-size: 0.875rem;
 }
 
@@ -621,10 +668,65 @@ a {
   }
 }
 
+/* Foto panorámica: empieza sobre el azul y termina sobre la franja clara de compromisos */
+.hero-foto {
+  position: relative;
+  z-index: 1;
+  margin: clamp(2.5rem, 1.5rem + 3vw, 4rem) 0 calc(-1 * var(--solape));
+}
+
+.hero-foto img,
+.foto-seccion img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radio);
+}
+
+.hero-foto figcaption,
+.foto-seccion figcaption {
+  margin-top: 0.625rem;
+  color: var(--texto-suave);
+  font-size: 0.8125rem;
+}
+
+/* El pie de la foto de portada ya queda sobre fondo claro */
+.hero-foto figcaption {
+  color: var(--tinta-suave);
+  text-align: right;
+}
+
+@media (min-width: 48em) {
+  .hero-foto img {
+    aspect-ratio: 2.2 / 1;
+  }
+}
+
+/* ---------- Fotos de sección ---------- */
+
+.foto-seccion {
+  margin-top: 2rem;
+}
+
+@media (min-width: 64em) {
+  /* Con foto, la columna del título ya no se queda fija y el texto se centra frente a ella */
+  .split-cabecera--foto {
+    position: static;
+  }
+
+  .split--foto {
+    align-items: center;
+  }
+
+  .split-cabecera--foto .foto-seccion img {
+    aspect-ratio: 4 / 5;
+  }
+}
+
 /* ---------- 3 · Compromisos ---------- */
 
 .compromisos {
-  border-block: 1px solid var(--lineas);
+  padding-top: calc(var(--solape) + 1rem);
 }
 
 .compromisos-lista {
@@ -639,8 +741,8 @@ a {
   flex-direction: column;
   gap: 0.875rem;
   padding: 1.75rem 0 1.75rem 1.25rem;
-  background: var(--fondo);
-  color: var(--navy);
+  background: var(--superficie);
+  color: var(--titulos);
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.4;
@@ -685,7 +787,7 @@ a {
 .perfil p {
   max-width: 36rem;
   margin-top: 0.625rem;
-  color: var(--tinta-suave);
+  color: var(--texto-suave);
 }
 
 @media (min-width: 64em) {
@@ -706,8 +808,8 @@ a {
   align-items: center;
   gap: 1.25rem;
   padding-block: 1.5rem;
-  background: var(--fondo);
-  color: var(--navy);
+  background: var(--superficie);
+  color: var(--titulos);
 }
 
 .servicio h3 {
@@ -775,13 +877,13 @@ a {
   left: 0;
   width: 3rem;
   height: 2px;
-  background: var(--navy);
+  background: var(--titulos);
 }
 
 .paso-num {
   display: block;
   margin-bottom: 1rem;
-  color: var(--navy);
+  color: var(--titulos);
   font-size: clamp(3rem, 2.4rem + 2.2vw, 4.25rem);
   line-height: 1;
   letter-spacing: -0.02em;
@@ -791,7 +893,7 @@ a {
 .paso p {
   max-width: 24rem;
   margin-top: 0.75rem;
-  color: var(--tinta-suave);
+  color: var(--texto-suave);
 }
 
 @media (min-width: 56em) {
@@ -804,6 +906,7 @@ a {
 /* ---------- 7 · Condiciones ---------- */
 
 .condiciones {
+  overflow: hidden;
   display: grid;
   border: 1px solid var(--lineas);
   border-radius: var(--radio);
@@ -811,6 +914,7 @@ a {
 }
 
 .condiciones-precio {
+  background: var(--arena);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -821,7 +925,7 @@ a {
 
 .precio-cifra {
   display: block;
-  color: var(--navy);
+  color: var(--titulos);
   font-family: var(--serif);
   font-size: clamp(4rem, 3rem + 4.5vw, 6.5rem);
   line-height: 0.95;
@@ -831,14 +935,14 @@ a {
 .precio-texto {
   display: block;
   margin-top: 0.875rem;
-  color: var(--tinta);
+  color: var(--texto);
   font-size: 1.125rem;
 }
 
 .precio-iva {
   display: block;
   margin-top: 0.25rem;
-  color: var(--tinta-suave);
+  color: var(--texto-suave);
   font-size: 0.875rem;
 }
 
@@ -852,7 +956,7 @@ a {
   gap: 1rem;
   padding-block: 1.125rem;
   border-top: 1px solid var(--lineas);
-  color: var(--tinta);
+  color: var(--texto);
 }
 
 .condiciones-lista li:first-child {
@@ -884,23 +988,34 @@ a {
 
 .regla {
   padding-block: clamp(4.5rem, 3rem + 6vw, 8rem);
-  background: var(--navy);
-  color: var(--fondo);
+}
+
+.regla-grid {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
 }
 
 .regla-contenido {
   max-width: 50rem;
 }
 
+.regla-foto {
+  margin-top: 0;
+}
+
+@media (min-width: 64em) {
+  .regla-grid {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    gap: 4rem;
+  }
+}
+
 .regla .icon {
   width: 2.75rem;
   height: 2.75rem;
   margin-bottom: 2.25rem;
-  color: var(--fondo);
-}
-
-.regla h2 {
-  color: var(--fondo);
+  color: var(--titulos);
 }
 
 .regla p {
@@ -908,10 +1023,6 @@ a {
   font-family: var(--serif);
   font-size: clamp(1.375rem, 1.15rem + 1.1vw, 2rem);
   line-height: 1.38;
-}
-
-.regla :focus-visible {
-  outline-color: var(--fondo);
 }
 
 /* ---------- 9 · Opiniones ---------- */
@@ -934,19 +1045,19 @@ a {
 }
 
 .opinion blockquote p {
-  color: var(--navy);
+  color: var(--titulos);
   font-family: var(--serif);
   font-size: 1.1875rem;
   line-height: 1.5;
 }
 
 .opinion figcaption {
-  color: var(--tinta-suave);
+  color: var(--texto-suave);
   font-size: 0.875rem;
 }
 
 .opinion-nombre {
-  color: var(--tinta);
+  color: var(--texto);
   font-weight: 600;
 }
 
@@ -961,7 +1072,7 @@ a {
 /* ---------- 10 · Quién está detrás ---------- */
 
 .quien-texto {
-  color: var(--navy);
+  color: var(--titulos);
   font-family: var(--serif);
   font-size: clamp(1.375rem, 1.15rem + 1vw, 1.875rem);
   line-height: 1.4;
@@ -978,7 +1089,7 @@ a {
   align-items: center;
   gap: 0.875rem;
   min-height: 2.75rem;
-  color: var(--navy);
+  color: var(--enlace);
   font-size: 1.0625rem;
   text-decoration: underline transparent;
   text-decoration-thickness: 1px;
@@ -1008,7 +1119,7 @@ a {
   gap: 1.5rem;
   padding-block: 1.375rem;
   list-style: none;
-  color: var(--navy);
+  color: var(--titulos);
   font-family: var(--serif);
   font-size: clamp(1.1875rem, 1.1rem + 0.35vw, 1.375rem);
   line-height: 1.3;
@@ -1037,7 +1148,7 @@ a {
 .faq-respuesta {
   max-width: 40rem;
   padding-bottom: 1.5rem;
-  color: var(--tinta-suave);
+  color: var(--texto-suave);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -1075,13 +1186,13 @@ a {
 .campo label {
   display: block;
   margin-bottom: 0.5rem;
-  color: var(--navy);
+  color: var(--titulos);
   font-size: 0.9375rem;
   font-weight: 500;
 }
 
 .opcional {
-  color: var(--tinta-suave);
+  color: var(--texto-suave);
   font-weight: 400;
 }
 
@@ -1171,7 +1282,7 @@ a {
 
 .campo--casilla label {
   margin: 0;
-  color: var(--tinta);
+  color: var(--texto);
   font-size: 0.9375rem;
   font-weight: 400;
   line-height: 1.55;
@@ -1193,7 +1304,7 @@ a {
 }
 
 .contacto-nombre {
-  color: var(--navy);
+  color: var(--titulos);
   font-family: var(--serif);
   font-size: 1.625rem;
   line-height: 1.2;
@@ -1237,7 +1348,7 @@ a {
 }
 
 .site-footer a {
-  color: var(--navy);
+  color: var(--enlace);
   text-decoration: underline transparent;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.25em;
@@ -1264,7 +1375,7 @@ a {
 
 .footer-legal p {
   margin-top: 0.75rem;
-  color: var(--tinta-suave);
+  color: var(--texto-suave);
   font-size: 0.875rem;
 }
 
@@ -1361,7 +1472,7 @@ a {
   display: inline-flex;
   align-items: center;
   min-height: 2.75rem;
-  color: var(--navy);
+  color: var(--enlace);
   font-size: 0.9375rem;
   font-weight: 500;
 }
@@ -1400,7 +1511,7 @@ a {
 
 .legal dt {
   margin-top: 0.75rem;
-  color: var(--tinta-suave);
+  color: var(--texto-suave);
   font-size: 0.875rem;
 }
 
@@ -1432,12 +1543,12 @@ a {
   width: 3rem;
   height: 3rem;
   margin-bottom: 2rem;
-  color: var(--navy);
+  color: var(--titulos);
 }
 
 .gracias p {
   margin-top: 1.25rem;
-  color: var(--tinta-suave);
+  color: var(--texto-suave);
   font-size: 1.125rem;
 }
 
@@ -1476,13 +1587,13 @@ a {
     transform: none !important;
   }
 
-  .regla {
+  .tono-navy,
+  .tono-profundo,
+  .tono-arena {
+    --titulos: var(--navy);
+    --texto: var(--tinta);
+    --texto-suave: var(--tinta-suave);
+    --enlace: var(--navy);
     background: none;
-    color: var(--tinta);
-  }
-
-  .regla h2,
-  .regla .icon {
-    color: var(--navy);
   }
 }

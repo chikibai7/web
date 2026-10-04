@@ -13,7 +13,7 @@ gracias.html        Destino del formulario (noindex)
 css/styles.css      Estilos (móvil primero)
 js/main.js          Menú móvil, animación al hacer scroll, validación del formulario y opiniones
 fonts/              Lora e Inter en woff2 (licencia OFL incluida)
-img/                Logos, favicons, og-image y originales (portada.png es la portada de redes; no se usa en la web)
+img/                Logos, favicons, og-image, fotos en WebP y originales del logo (portada.png es la portada de redes; no se usa en la web)
 data/opiniones.json Opiniones; si está vacío, la sección no aparece
 robots.txt, sitemap.xml, site.webmanifest, favicon.ico
 netlify.toml        Publicación, dirección web y cabeceras de seguridad (la CSP bloquea cualquier recurso de terceros)
@@ -38,6 +38,20 @@ del proyecto (`$URL`), así que no hay que tocar nada:
 
 Conviene llamar al proyecto `delegapisos` en Netlify (*Project configuration → General → Project details → Change project name*)
 para que la dirección sea legible.
+
+## Fotos
+
+Las fotos son ilustrativas y llevan la nota «Imagen ilustrativa». Se sirven en WebP, sin metadatos y en varios
+anchos para que cada pantalla descargue la que necesita:
+
+| Archivo | Dónde | Formato |
+|---|---|---|
+| `foto-salon-*.webp` | Portada (ordenador y tableta) | 2,2:1, de 800 a 2240 px |
+| `foto-salon-movil-*.webp` | Portada (móvil) | 4:3, de 400 a 1320 px |
+| `foto-recibidor-*.webp` | «Para quién es» | 4:5, de 400 a 1320 px |
+| `foto-fachada-*.webp` | «Solo pisos en regla» | 4:3, de 400 a 1400 px |
+
+Para cambiar una foto, basta con sustituir esos archivos por otros con el mismo nombre y proporción.
 
 ## Opiniones
 
